@@ -5,7 +5,7 @@ function toggleView(view) {
   const tourView = document.getElementById('tour-view');
   const supportBtn = document.getElementById('support-link-btn');
 
-  // Ẩn tất cả view trước
+  // Ẩn tất cả view 
   mainView.style.display = 'none';
   supportView.style.display = 'none';
 
