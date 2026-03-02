@@ -114,11 +114,11 @@
           <div class="link-text">Zalo (+84862852258)</div>
         </a>
 
-        <a href="#" class="link-card" onclick="alert('This link will be updated soon!')">
+        <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&amp;app_absent=0" class="link-card" target="_blank" rel="noopener noreferrer">
           <div class="link-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
           </div>
-          <div class="link-text">WhatsApp (Coming Soon)</div>
+          <div class="link-text">WhatsApp Chat</div>
         </a>
 
         <a href="#" class="link-card" onclick="alert('This link will be updated soon!')">
@@ -137,41 +137,321 @@
       </button>
       
       <div class="profile">
-        <h2 class="title" style="margin-top: 20px;">Local Highlights</h2>
-        <p class="subtitle">Our top picks for food, drinks &amp; vibes in Hoi An</p>
+        <h2 class="title" style="margin-top: 20px;">🌟 Local Highlights</h2>
+        <p class="subtitle">30 hand-picked spots for food, drinks &amp; vibes in Hoi An</p>
       </div>
 
-      <div class="recommendation-list">
-        
-        <div class="rec-card fade-in-up" style="animation-delay: 0.1s;" onclick="window.open('https://maps.app.goo.gl/TDFuK8v2zXh8Q31R8', '_blank')">
-          <div class="rec-icon">🥖</div>
-          <div class="rec-content">
-            <h4>Banh Mi Phuong</h4>
-            <p>World-famous authentic Vietnamese baguette sandwiches.</p>
-          </div>
-        </div>
+      <!-- Category Filter Tabs -->
+      <div class="rec-tabs">
+        <button class="rec-tab active" onclick="filterRec('all', this)">All</button>
+        <button class="rec-tab" onclick="filterRec('bar', this)">🍺 Bars</button>
+        <button class="rec-tab" onclick="filterRec('cocktail', this)">🍸 Cocktails</button>
+        <button class="rec-tab" onclick="filterRec('hotfood', this)">🍜 Hot Food</button>
+        <button class="rec-tab" onclick="filterRec('snack', this)">🥨 Snacks</button>
+        <button class="rec-tab" onclick="filterRec('shop', this)">🛍️ Shops</button>
+      </div>
 
-        <div class="rec-card fade-in-up" style="animation-delay: 0.2s;" onclick="window.open('https://maps.app.goo.gl/NHTjYq4c7V1Cq7Qd6', '_blank')">
-          <div class="rec-icon">🍲</div>
-          <div class="rec-content">
-            <h4>Morning Glory Original</h4>
-            <p>Exquisite traditional Vietnamese street food &amp; classics.</p>
-          </div>
-        </div>
+      <div class="recommendation-list" id="rec-list">
 
-        <div class="rec-card fade-in-up" style="animation-delay: 0.3s;" onclick="window.open('https://maps.app.goo.gl/Yf6p322z6C98v4g2A', '_blank')">
-          <div class="rec-icon">🍹</div>
+        <!-- ===== BARS ===== -->
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/Yf6p322z6C98v4g2A','_blank')">
+          <div class="rec-icon">🍺</div>
           <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
             <h4>Market Bar</h4>
-            <p>Cozy rooftop bar overlooking the Central Market.</p>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Amazing rooftop vibe overlooking the Central Market. Cold beer, great music, must visit at sunset."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/Yf6p322z6C98v4g2A" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
           </div>
         </div>
 
-        <div class="rec-card fade-in-up" style="animation-delay: 0.4s;" onclick="window.open('https://maps.app.goo.gl/G8d4QpXY76RjX1tQ7', '_blank')">
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/G8d4QpXY76RjX1tQ7','_blank')">
           <div class="rec-icon">🌊</div>
           <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
             <h4>Shore Club An Bang</h4>
-            <p>Premium beach club with a stunning pool &amp; drinks.</p>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Best beach club in the area. Swim in the pool, sip fresh cocktails, watch the sea. Absolutely stunning."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/G8d4QpXY76RjX1tQ7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/zREFMdmSBJPf3fqr6','_blank')">
+          <div class="rec-icon">🎸</div>
+          <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
+            <h4>Q Bar Hoi An</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">"Live music every night, laid-back atmosphere, affordable drinks. Perfect place to meet other travelers."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/zREFMdmSBJPf3fqr6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/E5bNAvNBHnNrH4Jh7','_blank')">
+          <div class="rec-icon">🏮</div>
+          <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
+            <h4>White Marble Wine Bar</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">"Sophisticated wine selection, intimate setting, knowledgeable staff. Ideal for a romantic evening in Old Town."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/E5bNAvNBHnNrH4Jh7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/7rCKhxDrRB4myP6o8','_blank')">
+          <div class="rec-icon">🌙</div>
+          <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
+            <h4>Dive Bar</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">"Famously funky dive bar, cheap buckets, pool table, very social crowd. Late-night institution in Hoi An."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/7rCKhxDrRB4myP6o8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/Nk6w9iMpGr3vC8VQ9','_blank')">
+          <div class="rec-icon">🍻</div>
+          <div class="rec-content">
+            <div class="rec-badge bar-badge">Bar</div>
+            <h4>Hoi An Roastery Bar</h4>
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+            <p class="rec-comment">"Coffee by day, craft beer bar by night. Incredible rooftop terrace with lantern views of the Ancient Town."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/Nk6w9iMpGr3vC8VQ9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <!-- ===== COCKTAILS ===== -->
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/HwXM4LWD5qWBt8WT8','_blank')">
+          <div class="rec-icon">🍸</div>
+          <div class="rec-content">
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+            <h4>Mango Mango</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Gorgeous riverside setting, creative tropical cocktails, beautiful lantern reflections on water. Pure magic."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/HwXM4LWD5qWBt8WT8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/tNFsq5KZ8biqyMCA8','_blank')">
+          <div class="rec-icon">🥂</div>
+          <div class="rec-content">
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+            <h4>Before &amp; Now Bar</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"The best cocktails in Hoi An, full stop. Extremely creative drinks, stunning presentation and warm hospitality."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/tNFsq5KZ8biqyMCA8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/r4TNt1FTk2xJrRVb9','_blank')">
+          <div class="rec-icon">🌴</div>
+          <div class="rec-content">
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+            <h4>Babylon Bar &amp; Lounge</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">"Chill lounge vibes, excellent Vietnamese-inspired cocktails — try the lychee mojito! Great DJ on weekends."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/r4TNt1FTk2xJrRVb9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/uR6sFd2mh8XRXQX97','_blank')">
+          <div class="rec-icon">🍋</div>
+          <div class="rec-content">
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+            <h4>Bitter &amp; Sweet Cocktail Bar</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">"Small, intimate craft cocktail bar. Every drink is a work of art. Try the signature pandan cocktail."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/uR6sFd2mh8XRXQX97" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/3BKAGNfJZkY9VCmF9','_blank')">
+          <div class="rec-icon">🫧</div>
+          <div class="rec-content">
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+            <h4>The Field Bar</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">"Open-air bar in a rice paddy setting. Unique atmosphere, signature gin cocktails, electric fairy-light vibe."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/3BKAGNfJZkY9VCmF9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <!-- ===== HOT FOOD ===== -->
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/TDFuK8v2zXh8Q31R8','_blank')">
+          <div class="rec-icon">🥖</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Banh Mi Phuong</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Anthony Bourdain called it 'the best sandwich I have ever eaten'. Queue is worth every minute. Essential."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/TDFuK8v2zXh8Q31R8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/NHTjYq4c7V1Cq7Qd6','_blank')">
+          <div class="rec-icon">🍲</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Morning Glory Original</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Cao Lau and White Rose are life-changing here. Best traditional Hoi An cuisine in a beautiful heritage setting."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/NHTjYq4c7V1Cq7Qd6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/v2sAuMh4Jt6y1qpL8','_blank')">
+          <div class="rec-icon">🍜</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Pho Xua</h4>
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+            <p class="rec-comment">"The most authentic pho in Hoi An. Rich bone broth, fresh herbs, silky noodles. Open from 6am — go early!"</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/v2sAuMh4Jt6y1qpL8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/Kf4G2eNvzFrSmBB39','_blank')">
+          <div class="rec-icon">🦐</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Nu Eatery</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Modern Vietnamese tapas. Creative, fresh, beautifully plated. The prawn rice paper rolls are out of this world."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/Kf4G2eNvzFrSmBB39" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/PuPsH9f7D3ZxcVJq9','_blank')">
+          <div class="rec-icon">🥢</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Quan Com Chay An Nhien</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">"Best vegetarian Vietnamese food in town. Huge portions, super cheap, very local atmosphere. Highly recommend."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/PuPsH9f7D3ZxcVJq9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/ZQXS8SY9T5BMnG9p7','_blank')">
+          <div class="rec-icon">🍳</div>
+          <div class="rec-content">
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+            <h4>Banh Mi Queen</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">"Local favorite banh mi spot. Crispy bread, rich fillings, super local prices. Great alternative to the famous spots."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/ZQXS8SY9T5BMnG9p7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <!-- ===== SNACKS & COFFEE ===== -->
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/12SncJZcfBDfSsZR9','_blank')">
+          <div class="rec-icon">🧋</div>
+          <div class="rec-content">
+            <div class="rec-badge snack-badge">Snack</div>
+            <h4>Mot Hoi An</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">"Famous herbal drink with lotus cup &amp; flowers. Instagram spot but actually very refreshing and tasty."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/12SncJZcfBDfSsZR9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/9vh92ncw6x1RZxbh7','_blank')">
+          <div class="rec-icon">☕</div>
+          <div class="rec-content">
+            <div class="rec-badge snack-badge">Snack</div>
+            <h4>Phin Coffee</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Hidden gem coffee shop. Exceptional Vietnamese coffee, cozy courtyard, friendly owner."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/9vh92ncw6x1RZxbh7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/mUb5n9aTGtSBtYZdA','_blank')">
+          <div class="rec-icon">🍨</div>
+          <div class="rec-content">
+            <div class="rec-badge snack-badge">Snack</div>
+            <h4>Ellie's Ice Cream</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Homemade ice cream with unique flavors like coconut coffee and passionfruit cheesecake. Kids love it."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/mUb5n9aTGtSBtYZdA" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/SHVidKAMoL5VUYWV7','_blank')">
+          <div class="rec-icon">🥐</div>
+          <div class="rec-content">
+            <div class="rec-badge snack-badge">Snack</div>
+            <h4>Rosie's Cafe</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">"Brunch favorite. Smoothie bowls, avocado toast, great coffee. Tucked in a quiet alley."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/SHVidKAMoL5VUYWV7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/ffFH7qcR3XfbzeKt7','_blank')">
+          <div class="rec-icon">🥤</div>
+          <div class="rec-content">
+            <div class="rec-badge snack-badge">Snack</div>
+            <h4>The Espresso Station</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Specialty coffee heaven. Try the salty coffee or coconut coffee. Tiny, atmospheric space."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/ffFH7qcR3XfbzeKt7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <!-- ===== SHOPS ===== -->
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/6nS8pKGghMNuF4Jc8','_blank')">
+          <div class="rec-icon">🎁</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge">Shop</div>
+            <h4>Reaching Out Tea House</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Peaceful tea house run by hearing-impaired staff. Beautiful ceramics shop attached — meaningful souvenirs."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/6nS8pKGghMNuF4Jc8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/kz3UmRQZfvWLZLUU8','_blank')">
+          <div class="rec-icon">🧵</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge">Shop</div>
+            <h4>A Dong Silk</h4>
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+            <p class="rec-comment">"Reliable tailor shop with excellent service. Perfect for custom suits, dresses, ao dai. Fair prices for quality."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/kz3UmRQZfvWLZLUU8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/4oFmBMMD2MxYcYN86','_blank')">
+          <div class="rec-icon">👗</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge">Shop</div>
+            <h4>Bebe Tailor</h4>
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+            <p class="rec-comment">"Very professional, fast turnaround, big selection of fabrics. Great for formalwear and office clothing."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/4oFmBMMD2MxYcYN86" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/CJe6nEPALgbWNbVL7','_blank')">
+          <div class="rec-icon">🪡</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge">Shop</div>
+            <h4>Yaly Couture</h4>
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+            <p class="rec-comment">"High-end tailor with premium fabrics. More expensive but top craftsmanship. Good for special occasion outfits."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/CJe6nEPALgbWNbVL7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+          </div>
+        </div>
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/mtTBrmoLAqP3GfJ68','_blank')">
+          <div class="rec-icon">🕯️</div>
+          <div class="rec-content">
+            <div class="rec-badge shop-badge">Shop</div>
+            <h4>Sunday in Hoi An</h4>
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+            <p class="rec-comment">"Beautiful lifestyle store with candles, home decor, and gifts. Very aesthetic and modern."</p>
+            <a class="rec-map-btn" href="https://maps.app.goo.gl/mtTBrmoLAqP3GfJ68" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
           </div>
         </div>
 
@@ -513,6 +793,9 @@
         <a href="https://zalo.me/84862852258" target="_blank" class="tour-modal-book-btn">
           📲 Book via Zalo — +84 862 852 258
         </a>
+        <a href="https://api.whatsapp.com/message/EEH7HNU2HKVJM1?autoload=1&amp;app_absent=0" target="_blank" class="tour-modal-book-btn">
+          💬 Chat via WhatsApp
+        </a>
       </div>
     `;
 
@@ -533,6 +816,32 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeTourModal(null, true);
   });
+
+  // ===== FILTER RECOMMENDATIONS =====
+  function filterRec(cat, btn) {
+    // Update active tab
+    document.querySelectorAll('.rec-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show/hide cards with animation
+    const cards = document.querySelectorAll('#rec-list .rec-card');
+    cards.forEach((card, i) => {
+      const match = (cat === 'all') || (card.dataset.cat === cat);
+      if (match) {
+        card.classList.remove('hidden');
+        // Re-trigger fade animation with stagger
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 40);
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
   </script>
 </body>
 </html>
