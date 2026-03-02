@@ -1030,3 +1030,40 @@ body {
 .rec-map-btn:hover {
   background: rgba(4,120,87,0.12);
 }
+
+/* ===== WIFI INFO PANEL ===== */
+.wifi-info-panel {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(4,120,87,0.05), rgba(16,185,129,0.08));
+  border: 1.5px solid rgba(4,120,87,0.12);
+  padding: 16px 20px;
+  border-radius: 16px;
+  margin-top: -8px;
+}
+
+.wifi-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.wifi-info-row + .wifi-info-row {
+  border-top: 1px solid rgba(4,120,87,0.1);
+}
+
+.wifi-info-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.wifi-info-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.wifi-pass-text {
+  letter-spacing: 0.08em;
+}

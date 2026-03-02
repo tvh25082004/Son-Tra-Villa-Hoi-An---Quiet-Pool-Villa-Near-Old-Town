@@ -85,6 +85,25 @@
           </div>
           <div class="link-text">Local Recommendations</div>
         </a>
+
+        <a href="#" class="link-card" onclick="toggleWifi(); return false;" id="wifi-link-card">
+          <div class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="link-text">Villa WiFi</div>
+        </a>
+
+        <!-- WiFi Details (hidden, slides open on click) -->
+        <div id="wifi-details" class="wifi-info-panel" style="display: none;">
+          <div class="wifi-info-row">
+            <span class="wifi-info-label">📶 Network</span>
+            <span class="wifi-info-value">Sơn Trà villa</span>
+          </div>
+          <div class="wifi-info-row">
+            <span class="wifi-info-label">🔑 Password</span>
+            <span class="wifi-info-value wifi-pass-text">79797979</span>
+          </div>
+        </div>
       </div>
     </div>
 
