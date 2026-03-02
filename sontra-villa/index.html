@@ -85,6 +85,25 @@
           </div>
           <div class="link-text">Local Recommendations</div>
         </a>
+
+        <a href="#" class="link-card" onclick="toggleWifi(); return false;" id="wifi-link-card">
+          <div class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="link-text">Villa WiFi</div>
+        </a>
+
+        <!-- WiFi Details (hidden, slides open on click) -->
+        <div id="wifi-details" class="wifi-info-panel" style="display: none;">
+          <div class="wifi-info-row">
+            <span class="wifi-info-label">📶 Network</span>
+            <span class="wifi-info-value">Sơn Trà villa</span>
+          </div>
+          <div class="wifi-info-row">
+            <span class="wifi-info-label">🔑 Password</span>
+            <span class="wifi-info-value wifi-pass-text">79797979</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -138,7 +157,7 @@
       
       <div class="profile">
         <h2 class="title" style="margin-top: 20px;">🌟 Local Highlights</h2>
-        <p class="subtitle">30 hand-picked spots for food, drinks &amp; vibes in Hoi An</p>
+        <p class="subtitle">80+ hand-picked spots for food, drinks &amp; vibes in Hoi An</p>
       </div>
 
       <!-- Category Filter Tabs -->
@@ -148,359 +167,1647 @@
         <button class="rec-tab" onclick="filterRec('cocktail', this)">🍸 Cocktails</button>
         <button class="rec-tab" onclick="filterRec('hotfood', this)">🍜 Hot Food</button>
         <button class="rec-tab" onclick="filterRec('snack', this)">🥨 Snacks</button>
+        <button class="rec-tab" onclick="filterRec('cafe', this)">☕ Cafés</button>
         <button class="rec-tab" onclick="filterRec('shop', this)">🛍️ Shops</button>
       </div>
 
       <div class="recommendation-list" id="rec-list">
 
-        <!-- ===== BARS ===== -->
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/Yf6p322z6C98v4g2A','_blank')">
+
+
+<div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Market%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🍺</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>Market Bar</h4>
+
             <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"Amazing rooftop vibe overlooking the Central Market. Cold beer, great music, must visit at sunset."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/Yf6p322z6C98v4g2A" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Amazing rooftop vibe overlooking the Central Market. Cold beer, great music.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Market%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/G8d4QpXY76RjX1tQ7','_blank')">
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Shore%20Club%20An%20Bang%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🌊</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>Shore Club An Bang</h4>
+
             <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"Best beach club in the area. Swim in the pool, sip fresh cocktails, watch the sea. Absolutely stunning."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/G8d4QpXY76RjX1tQ7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Best beach club in the area. Pool, cocktails, watch the sea.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Shore%20Club%20An%20Bang%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/zREFMdmSBJPf3fqr6','_blank')">
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Q%20Bar%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🎸</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>Q Bar Hoi An</h4>
+
             <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-            <p class="rec-comment">"Live music every night, laid-back atmosphere, affordable drinks. Perfect place to meet other travelers."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/zREFMdmSBJPf3fqr6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Live music every night, laid-back atmosphere, affordable drinks.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Q%20Bar%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/E5bNAvNBHnNrH4Jh7','_blank')">
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/White%20Marble%20Wine%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🏮</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>White Marble Wine Bar</h4>
+
             <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"Sophisticated wine selection, intimate setting, knowledgeable staff. Ideal for a romantic evening in Old Town."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/E5bNAvNBHnNrH4Jh7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Sophisticated wine selection, intimate setting, knowledgeable staff.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/White%20Marble%20Wine%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/7rCKhxDrRB4myP6o8','_blank')">
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Dive%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🌙</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>Dive Bar</h4>
+
             <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-            <p class="rec-comment">"Famously funky dive bar, cheap buckets, pool table, very social crowd. Late-night institution in Hoi An."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/7rCKhxDrRB4myP6o8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Funky dive bar, cheap buckets, pool table, very social crowd.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Dive%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/Nk6w9iMpGr3vC8VQ9','_blank')">
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Roastery%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
           <div class="rec-icon">🍻</div>
+
           <div class="rec-content">
+
             <div class="rec-badge bar-badge">Bar</div>
+
             <h4>Hoi An Roastery Bar</h4>
+
             <div class="rec-stars">★★★★☆ <span>4.4</span></div>
-            <p class="rec-comment">"Coffee by day, craft beer bar by night. Incredible rooftop terrace with lantern views of the Ancient Town."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/Nk6w9iMpGr3vC8VQ9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Coffee by day, craft beer by night. Rooftop terrace with lantern views.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Roastery%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <!-- ===== COCKTAILS ===== -->
-        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/HwXM4LWD5qWBt8WT8','_blank')">
-          <div class="rec-icon">🍸</div>
-          <div class="rec-content">
-            <div class="rec-badge cocktail-badge">Cocktail</div>
-            <h4>Mango Mango</h4>
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"Gorgeous riverside setting, creative tropical cocktails, beautiful lantern reflections on water. Pure magic."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/HwXM4LWD5qWBt8WT8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
 
-        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/tNFsq5KZ8biqyMCA8','_blank')">
-          <div class="rec-icon">🥂</div>
-          <div class="rec-content">
-            <div class="rec-badge cocktail-badge">Cocktail</div>
-            <h4>Before &amp; Now Bar</h4>
-            <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"The best cocktails in Hoi An, full stop. Extremely creative drinks, stunning presentation and warm hospitality."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/tNFsq5KZ8biqyMCA8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
 
-        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/r4TNt1FTk2xJrRVb9','_blank')">
-          <div class="rec-icon">🌴</div>
-          <div class="rec-content">
-            <div class="rec-badge cocktail-badge">Cocktail</div>
-            <h4>Babylon Bar &amp; Lounge</h4>
-            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-            <p class="rec-comment">"Chill lounge vibes, excellent Vietnamese-inspired cocktails — try the lychee mojito! Great DJ on weekends."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/r4TNt1FTk2xJrRVb9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Tiger%20Tiger%20Bar%20Hoi%20An%20Vietnam','_blank')">
 
-        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/uR6sFd2mh8XRXQX97','_blank')">
-          <div class="rec-icon">🍋</div>
-          <div class="rec-content">
-            <div class="rec-badge cocktail-badge">Cocktail</div>
-            <h4>Bitter &amp; Sweet Cocktail Bar</h4>
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"Small, intimate craft cocktail bar. Every drink is a work of art. Try the signature pandan cocktail."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/uR6sFd2mh8XRXQX97" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+          <div class="rec-icon">🎶</div>
 
-        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/3BKAGNfJZkY9VCmF9','_blank')">
-          <div class="rec-icon">🫧</div>
           <div class="rec-content">
-            <div class="rec-badge cocktail-badge">Cocktail</div>
-            <h4>The Field Bar</h4>
+
+            <div class="rec-badge bar-badge">Bar</div>
+
+            <h4>Tiger Tiger Bar</h4>
+
             <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-            <p class="rec-comment">"Open-air bar in a rice paddy setting. Unique atmosphere, signature gin cocktails, electric fairy-light vibe."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/3BKAGNfJZkY9VCmF9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Great live music venue with affordable drinks. Lively atmosphere.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Tiger%20Tiger%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <!-- ===== HOT FOOD ===== -->
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/TDFuK8v2zXh8Q31R8','_blank')">
-          <div class="rec-icon">🥖</div>
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Mia%20Coffee%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥃</div>
+
           <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Banh Mi Phuong</h4>
-            <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"Anthony Bourdain called it 'the best sandwich I have ever eaten'. Queue is worth every minute. Essential."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/TDFuK8v2zXh8Q31R8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <div class="rec-badge bar-badge">Bar</div>
+
+            <h4>Mia Coffee Bar</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Hidden gem near the river. Amazing sunset cocktails and chill music.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mia%20Coffee%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/NHTjYq4c7V1Cq7Qd6','_blank')">
-          <div class="rec-icon">🍲</div>
-          <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Morning Glory Original</h4>
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"Cao Lau and White Rose are life-changing here. Best traditional Hoi An cuisine in a beautiful heritage setting."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/NHTjYq4c7V1Cq7Qd6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/v2sAuMh4Jt6y1qpL8','_blank')">
-          <div class="rec-icon">🍜</div>
-          <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Pho Xua</h4>
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"The most authentic pho in Hoi An. Rich bone broth, fresh herbs, silky noodles. Open from 6am — go early!"</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/v2sAuMh4Jt6y1qpL8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/Kf4G2eNvzFrSmBB39','_blank')">
-          <div class="rec-icon">🦐</div>
-          <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Nu Eatery</h4>
-            <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"Modern Vietnamese tapas. Creative, fresh, beautifully plated. The prawn rice paper rolls are out of this world."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/Kf4G2eNvzFrSmBB39" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Why%20Not%20Bar%20Hoi%20An%20Vietnam','_blank')">
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/PuPsH9f7D3ZxcVJq9','_blank')">
-          <div class="rec-icon">🥢</div>
-          <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Quan Com Chay An Nhien</h4>
-            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-            <p class="rec-comment">"Best vegetarian Vietnamese food in town. Huge portions, super cheap, very local atmosphere. Highly recommend."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/PuPsH9f7D3ZxcVJq9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+          <div class="rec-icon">🍹</div>
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/ZQXS8SY9T5BMnG9p7','_blank')">
-          <div class="rec-icon">🍳</div>
           <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Banh Mi Queen</h4>
-            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-            <p class="rec-comment">"Grilled pork banh mi made fresh each order. Crispy, smoky and incredibly affordable. A local favorite."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/ZQXS8SY9T5BMnG9p7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
 
-        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.35s" onclick="window.open('https://maps.app.goo.gl/MxEHpxPPJhbPkNq68','_blank')">
-          <div class="rec-icon">🌮</div>
-          <div class="rec-content">
-            <div class="rec-badge hotfood-badge">Hot Food</div>
-            <h4>Thanh Cao Lau</h4>
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"The Cao Lau noodles here are made from ancient well water — completely unique to Hoi An. Do not miss this."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/MxEHpxPPJhbPkNq68" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+            <div class="rec-badge bar-badge">Bar</div>
 
-        <!-- ===== SNACKS / DRY FOOD ===== -->
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/qYD8Ck5pGRzBY4jt7','_blank')">
-          <div class="rec-icon">🫘</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Hoi An Roastery (Coffee)</h4>
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"Exceptional Vietnamese coffee and the BEST cà phê trứng (egg coffee) outside Hanoi. Cozy loft setting."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/qYD8Ck5pGRzBY4jt7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
+            <h4>Why Not Bar</h4>
 
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/fE3gMgQHHXknAEqf9','_blank')">
-          <div class="rec-icon">🍡</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Banh Bao Banh Vac (White Rose)</h4>
-            <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"The only place that makes the original White Rose dumplings. Delicate, silky, uniquely Hoi An. Unmissable."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/fE3gMgQHHXknAEqf9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/Jt3euvFJL4R5GKHS9','_blank')">
-          <div class="rec-icon">🥜</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Phuoc Thanh Nuts &amp; Dried Fruit</h4>
-            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-            <p class="rec-comment">"Huge variety of roasted nuts, dried fruits and local confectionery. Great for buying gifts and snacks to go."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/Jt3euvFJL4R5GKHS9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/x9BDMB1SeMsJsKwXA','_blank')">
-          <div class="rec-icon">🧁</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Cargo Club Patisserie</h4>
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"Beautiful French-Vietnamese pastries, croissants and cakes. River view terrace — perfect breakfast spot."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/x9BDMB1SeMsJsKwXA" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/4Yq3N9s8mkopVLj57','_blank')">
-          <div class="rec-icon">🍦</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Coco Box Ice Cream</h4>
-            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-            <p class="rec-comment">"Natural coconut shell ice cream with unique Vietnamese flavors — pandan, black sesame, durian. Instagrammable!"</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/4Yq3N9s8mkopVLj57" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/eWSz51pNpJvU49QU6','_blank')">
-          <div class="rec-icon">🫙</div>
-          <div class="rec-content">
-            <div class="rec-badge snack-badge">Snack</div>
-            <h4>Banh My &amp; Dry Food Market Stalls</h4>
-            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
-            <p class="rec-comment">"Head to the Central Market food stalls for dried shrimp, sesame candy, rice crackers and local dried goods."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/eWSz51pNpJvU49QU6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <!-- ===== SHOPS ===== -->
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.05s" onclick="window.open('https://maps.app.goo.gl/ELjHvGQrPqV2n7c47','_blank')">
-          <div class="rec-icon">👗</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Yaly Couture</h4>
-            <div class="rec-stars">★★★★★ <span>4.8</span></div>
-            <p class="rec-comment">"The most renowned tailor in Hoi An. Custom ao dai and suits made in 24–48 hrs. Impeccable quality."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/ELjHvGQrPqV2n7c47" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.10s" onclick="window.open('https://maps.app.goo.gl/EYM4hSBRSoiHDxVS9','_blank')">
-          <div class="rec-icon">🏮</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Reaching Out Arts &amp; Crafts</h4>
-            <div class="rec-stars">★★★★★ <span>4.9</span></div>
-            <p class="rec-comment">"Magical shop staffed by deaf and mute artisans. Handmade silk lanterns, ceramics, and wooden crafts. Deeply meaningful."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/EYM4hSBRSoiHDxVS9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.15s" onclick="window.open('https://maps.app.goo.gl/9o5bZNQY9mVLDc3y9','_blank')">
-          <div class="rec-icon">🧵</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Be Be Tailor</h4>
-            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
-            <p class="rec-comment">"Friendly, affordable custom clothing. Fast turnaround, excellent fitting. Great for casual summer dresses."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/9o5bZNQY9mVLDc3y9" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.20s" onclick="window.open('https://maps.app.goo.gl/mTz4hD2esgE1CwA29','_blank')">
-          <div class="rec-icon">🎨</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>A Dong Silk</h4>
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"World-class silk scarves, custom dresses and traditional Vietnamese silk souvenirs. Worth every dong."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/mTz4hD2esgE1CwA29" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.25s" onclick="window.open('https://maps.app.goo.gl/fJmDz3YRshyFRkuK6','_blank')">
-          <div class="rec-icon">🛒</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Hoi An Central Market</h4>
-            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
-            <p class="rec-comment">"The beating heart of Hoi An. Fresh produce, handicrafts, spices, dried goods, and local street food all under one roof."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/fJmDz3YRshyFRkuK6" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.30s" onclick="window.open('https://maps.app.goo.gl/Dqw39FQPJq7hYtVD8','_blank')">
-          <div class="rec-icon">🌸</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Tra Que Herb Village Shop</h4>
-            <div class="rec-stars">★★★★★ <span>4.7</span></div>
-            <p class="rec-comment">"Buy fresh herbs, organic teas and natural skincare products directly from the village. Authentic and aromatic."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/Dqw39FQPJq7hYtVD8" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
-          </div>
-        </div>
-
-        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.35s" onclick="window.open('https://maps.app.goo.gl/VWbN5m9rE1j8HyeC7','_blank')">
-          <div class="rec-icon">📿</div>
-          <div class="rec-content">
-            <div class="rec-badge shop-badge">Shop</div>
-            <h4>Hoi An Handmade Souvenirs</h4>
             <div class="rec-stars">★★★★☆ <span>4.3</span></div>
-            <p class="rec-comment">"Handwoven baskets, lacquerware, ceramic bowls and embroidered pouches. Wonderful one-stop souvenir shopping."</p>
-            <a class="rec-map-btn" href="https://maps.app.goo.gl/VWbN5m9rE1j8HyeC7" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+            <p class="rec-comment">&quot;Party bar on the main strip. Fun crowd, cheap drinks, open late.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Why%20Not%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
           </div>
+
         </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="bar" style="animation-delay:0.50s" onclick="window.open('https://www.google.com/maps/search/Tam%20Tam%20Cafe%20Lounge%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🎤</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge bar-badge">Bar</div>
+
+            <h4>Tam Tam Cafe Lounge</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+
+            <p class="rec-comment">&quot;Two-story colonial bar with live jazz and classic cocktails.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Tam%20Tam%20Cafe%20Lounge%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Mango%20Mango%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍸</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Mango Mango</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Riverside setting, creative tropical cocktails, lantern reflections.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mango%20Mango%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Before%20and%20Now%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥂</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Before and Now Bar</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+
+            <p class="rec-comment">&quot;The best cocktails in Hoi An. Creative drinks, stunning presentation.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Before%20and%20Now%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Babylon%20Bar%20Lounge%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🌴</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Babylon Bar Lounge</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Chill lounge vibes, Vietnamese-inspired cocktails, try the lychee mojito!&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Babylon%20Bar%20Lounge%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/Bitter%20Sweet%20Cocktail%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍋</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Bitter Sweet Cocktail Bar</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Small intimate craft cocktail bar. Every drink is a work of art.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Bitter%20Sweet%20Cocktail%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/The%20Field%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫧</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>The Field Bar</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Open-air bar in a rice paddy setting. Signature gin cocktails.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/The%20Field%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/The%20Little%20Menu%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🌺</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>The Little Menu</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Tiny hidden speakeasy with incredible molecular cocktails.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/The%20Little%20Menu%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Son%20Cocktail%20Bar%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍊</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Son Cocktail Bar</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Rooftop views with Vietnamese-twist cocktails. Try lemongrass gimlet.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Son%20Cocktail%20Bar%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cocktail" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Sakura%20Bar%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧊</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cocktail-badge">Cocktail</div>
+
+            <h4>Sakura Bar Hoi An</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+
+            <p class="rec-comment">&quot;Japanese-inspired cocktail lounge. Excellent sake-based cocktails.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Sakura%20Bar%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Banh%20Mi%20Phuong%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥖</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Banh Mi Phuong</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+
+            <p class="rec-comment">&quot;Anthony Bourdain called it the best sandwich ever. Essential Hoi An.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Mi%20Phuong%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Morning%20Glory%20Original%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍲</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Morning Glory Original</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Cao Lau and White Rose are life-changing here. Heritage setting.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Morning%20Glory%20Original%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Pho%20Xua%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍜</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Pho Xua</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Most authentic pho in Hoi An. Rich bone broth, fresh herbs.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Pho%20Xua%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/Nu%20Eatery%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🦐</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Nu Eatery</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+
+            <p class="rec-comment">&quot;Modern Vietnamese tapas. Creative, fresh, beautifully plated.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Nu%20Eatery%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Quan%20Com%20Chay%20An%20Nhien%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥢</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Quan Com Chay An Nhien</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Best vegetarian Vietnamese food. Huge portions, super cheap.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Quan%20Com%20Chay%20An%20Nhien%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Banh%20Mi%20Queen%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍳</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Banh Mi Queen</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Grilled pork banh mi made fresh. Crispy and affordable.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Mi%20Queen%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Thanh%20Cao%20Lau%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🌮</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Thanh Cao Lau</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Cao Lau noodles from ancient well water — unique to Hoi An.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Thanh%20Cao%20Lau%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Com%20Ga%20Ba%20Buoi%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍛</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Com Ga Ba Buoi</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Legendary chicken rice. Turmeric rice, tender chicken, fresh herbs.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Com%20Ga%20Ba%20Buoi%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Bale%20Well%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥘</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Bale Well</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;DIY fresh spring rolls with BBQ pork. Fun interactive dining.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Bale%20Well%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.50s" onclick="window.open('https://www.google.com/maps/search/Cao%20Lau%20Thanh%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍢</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Cao Lau Thanh</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Authentic cao lau in a tiny local shop. Pure Hoi An flavor.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cao%20Lau%20Thanh%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.55s" onclick="window.open('https://www.google.com/maps/search/Mi%20Quang%20Ong%20Hai%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫕</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Mi Quang Ong Hai</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Best mi quang noodles. Rich turmeric broth with shrimp and pork.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mi%20Quang%20Ong%20Hai%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.60s" onclick="window.open('https://www.google.com/maps/search/Madam%20Khanh%20Banh%20Mi%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥩</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Madam Khanh Banh Mi</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;The Banh Mi Queen! Rivals Banh Mi Phuong. Perfect fillings.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Madam%20Khanh%20Banh%20Mi%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.65s" onclick="window.open('https://www.google.com/maps/search/Vy%20Market%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🐟</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Vy Market Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Huge variety of Vietnamese street food under one roof.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Vy%20Market%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.70s" onclick="window.open('https://www.google.com/maps/search/Streets%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍝</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Streets Restaurant</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Social enterprise training street kids. Incredible food and cause.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Streets%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.75s" onclick="window.open('https://www.google.com/maps/search/White%20Rose%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥟</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>White Rose Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Original white rose dumpling makers. Delicate shrimp dumplings.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/White%20Rose%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.80s" onclick="window.open('https://www.google.com/maps/search/Mot%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🔥</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Mot Hoi An</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Modern Vietnamese fine dining. Beautiful garden, seasonal menu.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mot%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.85s" onclick="window.open('https://www.google.com/maps/search/Minh%20Hien%20Vegetarian%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥗</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Minh Hien Vegetarian</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Excellent vegetarian buffet. Incredible variety, unbelievable price.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Minh%20Hien%20Vegetarian%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.90s" onclick="window.open('https://www.google.com/maps/search/Secret%20Garden%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🐔</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Secret Garden Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Hidden rooftop restaurant with home-style Vietnamese cooking.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Secret%20Garden%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:0.95s" onclick="window.open('https://www.google.com/maps/search/Baby%20Mustard%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🦀</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Baby Mustard Restaurant</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Farm-to-table Vietnamese. Rice paddy views while you eat.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Baby%20Mustard%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.00s" onclick="window.open('https://www.google.com/maps/search/Tam%20Tam%20Cafe%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍖</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Tam Tam Cafe Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;French-Vietnamese fusion in a heritage building.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Tam%20Tam%20Cafe%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.05s" onclick="window.open('https://www.google.com/maps/search/Dac%20San%20Tran%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🌶️</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Dac San Tran Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Local favorite for spicy central Vietnamese dishes.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Dac%20San%20Tran%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.10s" onclick="window.open('https://www.google.com/maps/search/Pho%20Hung%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🐄</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Pho Hung</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+
+            <p class="rec-comment">&quot;Simple but delicious beef pho. Popular with locals for breakfast.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Pho%20Hung%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.15s" onclick="window.open('https://www.google.com/maps/search/Banh%20Xeo%20Ba%20Le%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥚</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Banh Xeo Ba Le</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Best crispy Vietnamese pancakes. Stuffed with shrimp and pork.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Xeo%20Ba%20Le%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.20s" onclick="window.open('https://www.google.com/maps/search/Lien%20Hoa%20Restaurant%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍗</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Lien Hoa Restaurant</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Massive menu of central Vietnamese specialties. Great com hen.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Lien%20Hoa%20Restaurant%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="hotfood" style="animation-delay:1.25s" onclick="window.open('https://www.google.com/maps/search/Banh%20Cuon%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫔</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge hotfood-badge">Hot Food</div>
+
+            <h4>Banh Cuon Hoi An</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Steamed rice rolls with minced pork and mushrooms. Silky smooth.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Cuon%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Roastery%20Coffee%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫘</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Hoi An Roastery Coffee</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Exceptional Vietnamese coffee and the BEST egg coffee outside Hanoi.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Roastery%20Coffee%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Banh%20Bao%20Banh%20Vac%20White%20Rose%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍡</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Banh Bao Banh Vac White Rose</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+
+            <p class="rec-comment">&quot;Only place that makes original White Rose dumplings. Unmissable.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Bao%20Banh%20Vac%20White%20Rose%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Phuoc%20Thanh%20Nuts%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥜</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Phuoc Thanh Nuts</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Huge variety of roasted nuts, dried fruits and local confectionery.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Phuoc%20Thanh%20Nuts%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/Cargo%20Club%20Patisserie%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧁</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Cargo Club Patisserie</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;French-Vietnamese pastries, croissants and cakes. River view terrace.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cargo%20Club%20Patisserie%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Coco%20Box%20Ice%20Cream%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍦</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Coco Box Ice Cream</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Coconut shell ice cream with pandan, black sesame, durian flavors.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Coco%20Box%20Ice%20Cream%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Central%20Market%20Food%20Stalls%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫙</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Central Market Food Stalls</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+
+            <p class="rec-comment">&quot;Dried shrimp, sesame candy, rice crackers and local dried goods.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Central%20Market%20Food%20Stalls%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Che%20Hoi%20An%20Dessert%20Soup%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍩</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Che Hoi An Dessert Soup</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Traditional Vietnamese sweet dessert soups. Colorful and refreshing.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Che%20Hoi%20An%20Dessert%20Soup%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Sinh%20To%20Stand%20An%20Bang%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥤</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Sinh To Stand An Bang</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Fresh tropical smoothies on the beach. Mango, passion fruit.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Sinh%20To%20Stand%20An%20Bang%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Banh%20Flan%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍮</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Banh Flan Hoi An</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.4</span></div>
+
+            <p class="rec-comment">&quot;Vietnamese caramel custard with strong coffee. Afternoon treat.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Flan%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.50s" onclick="window.open('https://www.google.com/maps/search/Banh%20Trang%20Nuong%20Stand%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧇</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Banh Trang Nuong Stand</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Vietnamese pizza! Grilled rice paper with egg and chili sauce.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Banh%20Trang%20Nuong%20Stand%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.55s" onclick="window.open('https://www.google.com/maps/search/Mango%20Rooms%20Dessert%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🥭</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Mango Rooms Dessert</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Creative mango desserts riverside. Mango sticky rice is divine.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mango%20Rooms%20Dessert%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="snack" style="animation-delay:0.60s" onclick="window.open('https://www.google.com/maps/search/Reaching%20Out%20Tea%20House%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍪</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge snack-badge">Snack</div>
+
+            <h4>Reaching Out Tea House</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Silent tea house run by deaf artisans. Beautiful teas and cookies.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Reaching%20Out%20Tea%20House%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Rosie%20Cafe%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">☕</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Rosie Cafe Hoi An</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Instagram-worthy coffeeshop with amazing breakfast and gorgeous decor.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Rosie%20Cafe%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/The%20Espresso%20Station%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍵</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>The Espresso Station</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Best specialty coffee in Hoi An. Single origin beans, expert baristas.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/The%20Espresso%20Station%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Faifo%20Coffee%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫖</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Faifo Coffee</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Rooftop cafe with panoramic old town views. Great sunset coffee.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Faifo%20Coffee%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/Co%20Muoi%20Cafe%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧋</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Co Muoi Cafe</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Hidden garden cafe in ancient town. Peaceful oasis, coconut coffee.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Co%20Muoi%20Cafe%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Mot%20Coffee%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">☕</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Mot Coffee Hoi An</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Trendy modern cafe with excellent cold brew and healthy bowls.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Mot%20Coffee%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/U%20Cafe%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🍵</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>U Cafe Hoi An</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Riverside cafe with hammocks and lantern views. Super chill vibes.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/U%20Cafe%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/An%20Bang%20Hideaway%20Cafe%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🫖</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>An Bang Hideaway Cafe</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Beach cafe with fresh juices and smoothie bowls. After a swim.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/An%20Bang%20Hideaway%20Cafe%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Sound%20of%20Silence%20Coffee%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">☕</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Sound of Silence Coffee</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Run by deaf baristas. Order via menu cards. Meaningful experience.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Sound%20of%20Silence%20Coffee%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/The%20Deck%20House%20An%20Bang%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧋</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>The Deck House An Bang</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Beachside cafe with great coffee and cocktails. Lovely sunset.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/The%20Deck%20House%20An%20Bang%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="cafe" style="animation-delay:0.50s" onclick="window.open('https://www.google.com/maps/search/Cocobox%20Hoi%20An%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">☕</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge cafe-badge">Café</div>
+
+            <h4>Cocobox Hoi An</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Organic coffee and smoothie bowls. Beautiful coconut theme decor.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Cocobox%20Hoi%20An%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.05s" onclick="window.open('https://www.google.com/maps/search/Yaly%20Couture%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">👗</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Yaly Couture</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.8</span></div>
+
+            <p class="rec-comment">&quot;Most renowned tailor in Hoi An. Custom ao dai and suits in 24-48 hrs.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Yaly%20Couture%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.10s" onclick="window.open('https://www.google.com/maps/search/Reaching%20Out%20Arts%20Crafts%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🏮</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Reaching Out Arts Crafts</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.9</span></div>
+
+            <p class="rec-comment">&quot;Magical shop staffed by deaf artisans. Handmade silk lanterns.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Reaching%20Out%20Arts%20Crafts%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.15s" onclick="window.open('https://www.google.com/maps/search/Be%20Be%20Tailor%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🧵</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Be Be Tailor</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Friendly, affordable custom clothing. Fast turnaround.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Be%20Be%20Tailor%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.20s" onclick="window.open('https://www.google.com/maps/search/A%20Dong%20Silk%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🎨</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>A Dong Silk</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;World-class silk scarves, custom dresses, Vietnamese silk souvenirs.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/A%20Dong%20Silk%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.25s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Central%20Market%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🛒</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Hoi An Central Market</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Heart of Hoi An. Fresh produce, handicrafts, spices, street food.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Central%20Market%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.30s" onclick="window.open('https://www.google.com/maps/search/Tra%20Que%20Herb%20Village%20Shop%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🌸</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Tra Que Herb Village Shop</h4>
+
+            <div class="rec-stars">★★★★★ <span>4.7</span></div>
+
+            <p class="rec-comment">&quot;Fresh herbs, organic teas and natural skincare from the village.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Tra%20Que%20Herb%20Village%20Shop%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.35s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Handmade%20Souvenirs%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">📿</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Hoi An Handmade Souvenirs</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.3</span></div>
+
+            <p class="rec-comment">&quot;Handwoven baskets, lacquerware, ceramic bowls, embroidered pouches.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Handmade%20Souvenirs%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.40s" onclick="window.open('https://www.google.com/maps/search/Metiseko%20Boutique%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🪭</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Metiseko Boutique</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.6</span></div>
+
+            <p class="rec-comment">&quot;Eco-friendly fashion with Vietnamese prints. Beautiful silk scarves.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Metiseko%20Boutique%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="rec-card fade-in-up" data-cat="shop" style="animation-delay:0.45s" onclick="window.open('https://www.google.com/maps/search/Hoi%20An%20Lantern%20Company%20Hoi%20An%20Vietnam','_blank')">
+
+          <div class="rec-icon">🎭</div>
+
+          <div class="rec-content">
+
+            <div class="rec-badge shop-badge">Shop</div>
+
+            <h4>Hoi An Lantern Company</h4>
+
+            <div class="rec-stars">★★★★☆ <span>4.5</span></div>
+
+            <p class="rec-comment">&quot;Handmade silk lanterns in every color and shape. Ships worldwide.&quot;</p>
+
+            <a class="rec-map-btn" href="https://www.google.com/maps/search/Hoi%20An%20Lantern%20Company%20Hoi%20An%20Vietnam" target="_blank" onclick="event.stopPropagation()">📍 Get Directions</a>
+
+          </div>
+
+        </div>
+
+
 
       </div>
+
     </div>
+
+
 
     <!-- TOUR VIEW -->
     <div id="tour-view" class="fade-in" style="display: none;">

@@ -32,3 +32,23 @@ function toggleView(view) {
     supportBtn.style.display = 'flex';
   }
 }
+
+function toggleWifi() {
+  const panel = document.getElementById('wifi-details');
+  if (panel.style.display === 'none') {
+    panel.style.display = 'block';
+    panel.style.opacity = '0';
+    panel.style.transform = 'translateY(-10px)';
+    setTimeout(() => {
+      panel.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      panel.style.opacity = '1';
+      panel.style.transform = 'translateY(0)';
+    }, 10);
+  } else {
+    panel.style.opacity = '0';
+    panel.style.transform = 'translateY(-10px)';
+    setTimeout(() => {
+      panel.style.display = 'none';
+    }, 300);
+  }
+}
