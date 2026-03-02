@@ -72,11 +72,11 @@
           <div class="link-text">Google Maps Location</div>
         </a>
 
-        <a href="#" class="link-card" onclick="alert('This link will be updated soon!')">
+        <a href="#" class="link-card" onclick="toggleView('tour'); return false;">
           <div class="link-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
           </div>
-          <div class="link-text">Tour List (Coming Soon)</div>
+          <div class="link-text">Hoi An Tour List</div>
         </a>
 
         <a href="#" class="link-card" onclick="toggleView('recommendations'); return false;">
@@ -175,6 +175,105 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- TOUR VIEW -->
+    <div id="tour-view" class="fade-in" style="display: none;">
+      <button class="back-btn" onclick="toggleView('main')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Go Back
+      </button>
+      
+      <div class="profile">
+        <h2 class="title" style="margin-top: 20px;">Discovery Tours</h2>
+        <p class="subtitle">Hand-picked authentic experiences in & around Hoi An</p>
+      </div>
+
+      <div class="tour-list">
+        <!-- Tour 1 -->
+        <div class="tour-card fade-in-up" style="animation-delay: 0.1s;">
+          <div class="tour-badge">Popular</div>
+          <div class="tour-image-container">
+            <img src="cham_island.png" alt="Cham Island Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Cham Island Snorkeling Daily Tour</h3>
+            <p>Explore the stunning biosphere reserve. includes speedboat, snorkeling at Bai Xep (45 mins), and a fresh seafood BBQ lunch on the island.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Full Day</div>
+              <div class="tour-meta-item">📍 Cham Island</div>
+              <div class="tour-meta-item">🌊 Snorkeling</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 2 -->
+        <div class="tour-card fade-in-up" style="animation-delay: 0.2s;">
+          <div class="tour-badge">Culture</div>
+          <div class="tour-image-container">
+            <img src="basket_boat.png" alt="Cam Thanh Basket Boat">
+          </div>
+          <div class="tour-info">
+            <h3>Cam Thanh Village & Basket Boat</h3>
+            <p>Navigate the lush coconut waterways in a traditional bamboo basket boat. Experience crab catching and local fishing techniques.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Half Day</div>
+              <div class="tour-meta-item">📍 Coconut Forest</div>
+              <div class="tour-meta-item">🛶 Adventure</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 3 -->
+        <div class="tour-card fade-in-up" style="animation-delay: 0.3s;">
+          <div class="tour-badge">Must See</div>
+          <div class="tour-image-container">
+            <img src="golden_bridge.png" alt="Ba Na Hills">
+          </div>
+          <div class="tour-info">
+            <h3>Ba Na Hills & Golden Bridge</h3>
+            <p>Ride the world's longest cable car to the iconic 'Hands of God' bridge. Explore the French Village and enjoy panoramic mountain views.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Full Day</div>
+              <div class="tour-meta-item">📍 Da Nang</div>
+              <div class="tour-meta-item">🚠 Cable Car</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 4 -->
+        <div class="tour-card fade-in-up" style="animation-delay: 0.4s;">
+          <div class="tour-badge">Authentic</div>
+          <div class="tour-image-container">
+            <img src="hoi_an_town.png" alt="Hoi An City Tour">
+          </div>
+          <div class="tour-info">
+            <h3>Hoi An City, Boat & Street Food</h3>
+            <p>Discover the ancient town's secrets, enjoy a romantic flower lantern boat ride, and taste famous local specialties like Banh Mi & Cao Lau.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ Afternoon</div>
+              <div class="tour-meta-item">📍 Old Town</div>
+              <div class="tour-meta-item">🍜 Foodie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour 5 -->
+        <div class="tour-card fade-in-up" style="animation-delay: 0.5s;">
+          <div class="tour-badge">History</div>
+          <div class="tour-image-container">
+            <img src="my_son.png" alt="My Son Sanctuary">
+          </div>
+          <div class="tour-info">
+            <h3>My Son Sanctuary Discovery</h3>
+            <p>Journey to the spiritual heart of the Champa Kingdom. Explore ancient Hindu temples nestled in a lush valley with an expert guide.</p>
+            <div class="tour-meta">
+              <div class="tour-meta-item">⏱ 5-6 hours</div>
+              <div class="tour-meta-item">📍 Duy Xuyen</div>
+              <div class="tour-meta-item">🏛️ UNESCO</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
